@@ -82,5 +82,58 @@ namespace MDITextEditor
         {
             Application.Exit();
         }
+
+        // 12 point font
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 12);
+        }
+
+        // 16 point font
+        private void pointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 16);
+        }
+
+        // 20 point font
+        private void pointToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 20);
+        }
+
+        private void algerianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font("ALGERIAN", 12);
+        }
+
+        private void comicSansMSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font("Comic Sans MS", 12);
+        }
+
+        private void segoeUIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Font = new Font("Seoe UI", 12);
+        }
+
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Controls["richTextBox1"].ForeColor = Color.Black;
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Controls["richTextBox1"].ForeColor = Color.Red;
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Controls["richTextBox1"].ForeColor = Color.Green;
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Controls["richTextBox1"].ForeColor = Color.Blue;
+        }
     }
 }
