@@ -28,7 +28,7 @@ namespace MDITextEditor
         {
             openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog1.RestoreDirectory = true;
-            openFileDialog1.Filter = "Text Files (*.txt)|*.txt| Rich Text Format (*.rtf)|*.rtf|" + "All Files (*.*)|*.*|";
+            openFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files (*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 String fileName = openFileDialog1.FileName;
