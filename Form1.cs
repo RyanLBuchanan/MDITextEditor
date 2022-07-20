@@ -22,6 +22,7 @@ namespace MDITextEditor
             MyForm childform = new MyForm();
             childform.MdiParent = this;  // Book gives "parentForm"
             childform.Show();
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +48,39 @@ namespace MDITextEditor
                     }
                 }
             }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
+            //saveFileDialog1.AddExtension = true;
+            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    Form activeChildForm = this.ActiveMdiChild;
+            //    if (activeChildForm != null)
+            //    {
+            //        RichTextBox RichtxtEditor = activeChildForm.ActiveControl as RichTextBox;
+            //        if (RichtxtEditor != null)
+            //        {
+            //            string extension = System.IO.Path.GetExtension(saveFileDialog1.FileName);
+            //            if (extension.ToLower() == ".txt") /*saveFileDialog.FilterIndex==1*/
+            //                RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+            //            else if (extension.ToLower() == ".rtf")
+            //                RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+            //        }
+            //    }
+            //}
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Close();
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
