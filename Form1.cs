@@ -145,5 +145,10 @@ namespace MDITextEditor
         {
             ActiveMdiChild.Controls["richTextBox1"].ForeColor = Color.Blue;
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You just clicked the about button . . . er, it was put there as a filler.");
+        }
     }
 }
