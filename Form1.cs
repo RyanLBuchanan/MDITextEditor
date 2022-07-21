@@ -21,9 +21,16 @@ namespace MDITextEditor
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var childform = new MyForm();
-            childform.MdiParent = this;  // Book gives "parentForm"
-            childform.Text = $"MyForm {counter}";
+            var childform = new MyForm
+            {
+                MdiParent = this,  // Book gives "parentForm"
+                Text = $"MyForm {counter}"
+            };
+            // THE ABOVE REPLACES THE FOLLOWING
+            ////childform.MdiParent = this;  // Book gives "parentForm"
+            ////childform.Text = $"MyForm {counter}";
+            ///
+
             childform.Show();
             counter++;
             //this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  // Alternative code the creates new rich text doc
