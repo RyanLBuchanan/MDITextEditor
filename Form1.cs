@@ -22,7 +22,7 @@ namespace MDITextEditor
             MyForm childform = new MyForm();
             childform.MdiParent = this;  // Book gives "parentForm"
             childform.Show();
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            //this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  // Alternative code the creates new rich text doc
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
