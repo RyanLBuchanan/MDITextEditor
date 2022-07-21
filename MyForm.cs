@@ -12,9 +12,14 @@ namespace MDITextEditor
 {
     public partial class MyForm : Form
     {
+        //string childform;
+        //int counter = -1;
+
         public MyForm()
         {
             InitializeComponent();
+
+            //Text = title; // HOW DO YOU ADD NUMBERING?
         }
 
         public void OpenFile(string fileName)

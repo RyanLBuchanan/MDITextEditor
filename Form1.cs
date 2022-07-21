@@ -12,6 +12,8 @@ namespace MDITextEditor
 {
     public partial class MDIContainer : Form
     {
+        int counter = 1;
+
         public MDIContainer()
         {
             InitializeComponent();
@@ -19,9 +21,11 @@ namespace MDITextEditor
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyForm childform = new MyForm();
+            var childform = new MyForm();
             childform.MdiParent = this;  // Book gives "parentForm"
+            childform.Text = $"MyForm {counter}";
             childform.Show();
+            counter++;
             //this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  // Alternative code the creates new rich text doc
         }
 
@@ -52,30 +56,29 @@ namespace MDITextEditor
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
-            //saveFileDialog1.AddExtension = true;
-            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    Form activeChildForm = this.ActiveMdiChild;
-            //    if (activeChildForm != null)
-            //    {
-            //        RichTextBox RichtxtEditor = activeChildForm.ActiveControl as RichTextBox;
-            //        if (RichtxtEditor != null)
-            //        {
-            //            string extension = System.IO.Path.GetExtension(saveFileDialog1.FileName);
-            //            if (extension.ToLower() == ".txt") /*saveFileDialog.FilterIndex==1*/
-            //                RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-            //            else if (extension.ToLower() == ".rtf")
-            //                RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-            //        }
-            //    }
-            //}
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|All Files(*.*)|*.*";
+            saveFileDialog1.AddExtension = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Form activeChildForm = ActiveMdiChild;
+                if (activeChildForm != null)
+                {
+                    RichTextBox RichtxtEditor = activeChildForm.ActiveControl as RichTextBox;
+                    if (RichtxtEditor != null)
+                    {
+                        string extension = System.IO.Path.GetExtension(saveFileDialog1.FileName);
+                        if (extension.ToLower() == ".txt") /*saveFileDialog.FilterIndex==1*/
+                            RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                        else if (extension.ToLower() == ".rtf")
+                            RichtxtEditor.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                    }
+                }
+            }
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ActiveMdiChild.Close();
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,34 +89,34 @@ namespace MDITextEditor
         // 12 point font
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 12);
+            ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 12);
         }
 
         // 16 point font
         private void pointToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 16);
+            ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 16);
         }
 
         // 20 point font
         private void pointToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 20);
+            ActiveMdiChild.Font = new Font(ActiveMdiChild.Font.Name, 20);
         }
 
         private void algerianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font("ALGERIAN", 12);
+            ActiveMdiChild.Font = new Font("ALGERIAN", 12);
         }
 
         private void comicSansMSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font("Comic Sans MS", 12);
+           ActiveMdiChild.Font = new Font("Comic Sans MS", 12);
         }
 
         private void segoeUIToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Font = new Font("Seoe UI", 12);
+           ActiveMdiChild.Font = new Font("Seoe UI", 12);
         }
 
         private void blackToolStripMenuItem_Click(object sender, EventArgs e)

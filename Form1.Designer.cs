@@ -63,6 +63,7 @@ namespace MDITextEditor
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,27 +145,27 @@ namespace MDITextEditor
             this.pointToolStripMenuItem,
             this.pointToolStripMenuItem1});
             this.sizeToolStripMenuItem.Name = "sizeToolStripMenuItem";
-            this.sizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sizeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.sizeToolStripMenuItem.Text = "Size";
             // 
             // size12ToolStripMenuItem
             // 
             this.size12ToolStripMenuItem.Name = "size12ToolStripMenuItem";
-            this.size12ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.size12ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.size12ToolStripMenuItem.Text = "12 point";
             this.size12ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // pointToolStripMenuItem
             // 
             this.pointToolStripMenuItem.Name = "pointToolStripMenuItem";
-            this.pointToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pointToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.pointToolStripMenuItem.Text = "16 point";
             this.pointToolStripMenuItem.Click += new System.EventHandler(this.pointToolStripMenuItem_Click);
             // 
             // pointToolStripMenuItem1
             // 
             this.pointToolStripMenuItem1.Name = "pointToolStripMenuItem1";
-            this.pointToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.pointToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.pointToolStripMenuItem1.Text = "20  point";
             this.pointToolStripMenuItem1.Click += new System.EventHandler(this.pointToolStripMenuItem1_Click);
             // 
@@ -175,14 +176,14 @@ namespace MDITextEditor
             this.comicSansMSToolStripMenuItem,
             this.segoeUIToolStripMenuItem});
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.fontToolStripMenuItem.Text = "Font";
             // 
             // algerianToolStripMenuItem
             // 
             this.algerianToolStripMenuItem.Font = new System.Drawing.Font("Algerian", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.algerianToolStripMenuItem.Name = "algerianToolStripMenuItem";
-            this.algerianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.algerianToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.algerianToolStripMenuItem.Text = "Algerian";
             this.algerianToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.algerianToolStripMenuItem.Click += new System.EventHandler(this.algerianToolStripMenuItem_Click);
@@ -191,14 +192,14 @@ namespace MDITextEditor
             // 
             this.comicSansMSToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comicSansMSToolStripMenuItem.Name = "comicSansMSToolStripMenuItem";
-            this.comicSansMSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comicSansMSToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.comicSansMSToolStripMenuItem.Text = "Comic Sans MS";
             this.comicSansMSToolStripMenuItem.Click += new System.EventHandler(this.comicSansMSToolStripMenuItem_Click);
             // 
             // segoeUIToolStripMenuItem
             // 
             this.segoeUIToolStripMenuItem.Name = "segoeUIToolStripMenuItem";
-            this.segoeUIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.segoeUIToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.segoeUIToolStripMenuItem.Text = "Segoe UI";
             this.segoeUIToolStripMenuItem.Click += new System.EventHandler(this.segoeUIToolStripMenuItem_Click);
             // 
@@ -210,13 +211,13 @@ namespace MDITextEditor
             this.greenToolStripMenuItem,
             this.blueToolStripMenuItem});
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.colorToolStripMenuItem.Text = "Color";
             // 
             // blackToolStripMenuItem
             // 
             this.blackToolStripMenuItem.Name = "blackToolStripMenuItem";
-            this.blackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blackToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.blackToolStripMenuItem.Text = "Black";
             this.blackToolStripMenuItem.Click += new System.EventHandler(this.blackToolStripMenuItem_Click);
             // 
@@ -224,7 +225,7 @@ namespace MDITextEditor
             // 
             this.redToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.redToolStripMenuItem.Name = "redToolStripMenuItem";
-            this.redToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.redToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.redToolStripMenuItem.Text = "Red";
             this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
             // 
@@ -232,7 +233,7 @@ namespace MDITextEditor
             // 
             this.greenToolStripMenuItem.ForeColor = System.Drawing.Color.Green;
             this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
-            this.greenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.greenToolStripMenuItem.Text = "Green";
             this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
             // 
@@ -240,7 +241,7 @@ namespace MDITextEditor
             // 
             this.blueToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            this.blueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.blueToolStripMenuItem.Text = "Blue";
             this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
@@ -384,6 +385,7 @@ namespace MDITextEditor
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
