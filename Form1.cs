@@ -148,7 +148,8 @@ namespace MDITextEditor
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You just clicked the about button . . . er, it was put there as a filler.");
+            MessageBox.Show("You just clicked the about button . . . er, it was put there as a filler.", 
+                "About This Program", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
         }
     }
 }
